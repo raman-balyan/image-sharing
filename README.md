@@ -1,0 +1,1 @@
+An image sharing app based on meteor framework.
