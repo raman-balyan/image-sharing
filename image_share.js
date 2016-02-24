@@ -1,3 +1,5 @@
+Images = new Mongo.Collection("images");
+
 if (Meteor.isClient) {
   var img_data = [
   {
