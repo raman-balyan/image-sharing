@@ -9,7 +9,7 @@ if (Meteor.isServer){
         }
         ); 
       }
-    console.log(Images.find().count());
+    console.log("startup.js says: "+Images.find().count());
     }
   });
 }
