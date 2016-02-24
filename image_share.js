@@ -19,7 +19,7 @@ if (Meteor.isClient) {
 
   Template.images.events({
     'click .js-image': function(event){
-      $(event.target).css("width", "50px");
+      $(event.target).css("width", "60px");
 
     }
   });
