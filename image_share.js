@@ -1,12 +1,15 @@
 Images = new Mongo.Collection("images");
 
 if (Meteor.isClient) {
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_AND_EMAIL"
+  });
 
   Template.images.helpers({images:Images.find({}, {sort:{createdOn:-1, rating:-1}})});
 
   Template.body.helpers({username: function(){
     if(Meteor.user()){
-      return Meteor.user().emails[0].address;
+      return Meteor.user().username;
     }
     else{
       return "anonymous user";
