@@ -3,7 +3,7 @@
 </head>
 
 <body>
-  <h1>Welcome to Image Share</h1>
+  <h1>Welcome to Image Share {{username}}!</h1>
   {{> image_add_form}}
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -41,7 +41,9 @@
 </template>
 
 <template name="images">
+  {{#if currentUser}}
   <button class="btn btn-success js-show-image-form">add image</button>
+  {{/if}}
   <div class="row">
   {{#each images}}
   <div class="col-xs-12 col-sm-4" id="{{_id}}">
