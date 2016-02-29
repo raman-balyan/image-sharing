@@ -1,5 +1,4 @@
-if (Meteor.isServer){
-  Meteor.startup(function(){
+Meteor.startup(function(){
     if(Images.find().count() == 0){
       for(i=1;i<23;i++){
         Images.insert(
@@ -12,4 +11,3 @@ if (Meteor.isServer){
     console.log("startup.js says: "+Images.find().count());
     }
   });
-}
