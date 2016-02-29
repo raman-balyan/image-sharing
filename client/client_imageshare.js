@@ -1,7 +1,3 @@
-Images = new Mongo.Collection("images");
-
-if (Meteor.isClient) {
-  
   Session.set("imageLimit", 6);
   lastScrollTop = 0;
   $(window).scroll(function(event){
@@ -105,4 +101,3 @@ if (Meteor.isClient) {
       return false;
     }
   });
-}
